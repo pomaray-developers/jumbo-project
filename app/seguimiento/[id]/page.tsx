@@ -201,7 +201,7 @@ export default function TrackingPage({ params }: { params: { id: string } }) {
                       <span className="text-sm font-medium">Progreso del envío</span>
                       <span className="text-sm font-medium">{progress}%</span>
                     </div>
-                    <Progress value={progress} className="h-2" />
+                    <Progress value={progress} />
                   </div>
 
                   <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mb-6">
