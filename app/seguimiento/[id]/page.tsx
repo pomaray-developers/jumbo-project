@@ -10,7 +10,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { CheckCircle2, Clock, Package, Truck, Home, ShoppingBag, MapPin } from "lucide-react"
 import { formatCurrency } from "@/lib/utils"
 import { useRouter } from "next/navigation"
-import { Progress } from "@/components/ui/progress"
 
 interface OrderStatus {
   id: string
@@ -201,7 +200,10 @@ export default function TrackingPage({ params }: { params: { id: string } }) {
                       <span className="text-sm font-medium">Progreso del envío</span>
                       <span className="text-sm font-medium">{progress}%</span>
                     </div>
-                    <Progress value={progress} />
+                    {/* Barra de progreso simple */}
+                    <div className="relative h-2 w-full overflow-hidden rounded-full bg-gray-200">
+                      <div className="h-full bg-red-600 transition-all" style={{ width: `${progress}%` }} />
+                    </div>
                   </div>
 
                   <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mb-6">

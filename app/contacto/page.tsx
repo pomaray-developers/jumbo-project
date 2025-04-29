@@ -103,7 +103,7 @@ export default function ContactoPage() {
 
                       <div className="space-y-2">
                         <Label htmlFor="asunto">Asunto</Label>
-                        <Select value={formData.asunto} onValueChange={handleSelectChange} required>
+                        <Select onValueChange={handleSelectChange} defaultValue={formData.asunto}>
                           <SelectTrigger id="asunto">
                             <SelectValue placeholder="Selecciona un asunto" />
                           </SelectTrigger>
