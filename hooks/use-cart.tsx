@@ -15,8 +15,16 @@ interface CartContextType {
   clearCart: () => void
 }
 
-const CartContext = createContext<CartContextType | undefined>(undefined)
+// Crear el contexto con un valor por defecto
+const CartContext = createContext<CartContextType>({
+  items: [],
+  addItem: () => {},
+  removeItem: () => {},
+  updateItemQuantity: () => {},
+  clearCart: () => {},
+})
 
+// Componente proveedor del contexto
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])
 
@@ -64,17 +72,21 @@ export function CartProvider({ children }: { children: ReactNode }) {
     sessionStorage.removeItem("cart")
   }
 
-  return (
-    <CartContext.Provider value={{ items, addItem, removeItem, updateItemQuantity, clearCart }}>
-      {children}
-    </CartContext.Provider>
-  )
+  // Crear el objeto de valor del contexto
+  const contextValue = {
+    items,
+    addItem,
+    removeItem,
+    updateItemQuantity,
+    clearCart,
+  }
+
+  // Usar el proveedor del contexto con el valor
+  return <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
 }
 
+// Hook para usar el contexto
 export function useCart() {
   const context = useContext(CartContext)
-  if (context === undefined) {
-    throw new Error("useCart must be used within a CartProvider")
-  }
   return context
 }

@@ -15,7 +15,13 @@ interface AuthContextType {
   logout: () => Promise<void>
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined)
+// Crear el contexto con un valor por defecto
+const AuthContext = createContext<AuthContextType>({
+  user: null,
+  isAuthenticated: false,
+  login: async () => {},
+  logout: async () => {},
+})
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
@@ -45,7 +51,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setIsAuthenticated(false)
   }
 
-  return <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>{children}</AuthContext.Provider>
+  // Crear el objeto de valor del contexto
+  const contextValue = {
+    user,
+    isAuthenticated,
+    login,
+    logout,
+  }
+
+  return <AuthContext.Provider value={contextValue}>{children}</AuthContext.Provider>
 }
 
 export { AuthContext }
