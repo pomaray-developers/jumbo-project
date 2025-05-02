@@ -68,7 +68,7 @@ export function Categories() {
         <h2 className="text-3xl font-bold mb-8 text-center">Categorías</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4">
           {categories.map((category) => (
-            <Link key={category.id} href={`/productos/categoria/${category.slug}`}>
+            <Link key={category.id} href={`/productos/categoria/${category.slug}`} passHref scroll={false}>
               <Card className="overflow-hidden h-full transition-transform hover:scale-105">
                 <div className="pt-[100%] relative">
                   <Image src={category.image || "/placeholder.svg"} alt={category.name} fill className="object-cover" />

@@ -5,13 +5,14 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { AuthProvider } from "@/components/auth-provider"
 import { CartProvider } from "@/hooks/use-cart"
+import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Jumbo Supermercado - Los mejores productos al mejor precio",
   description: "Encuentra todo lo que necesitas en Jumbo Supermercado. Compra online y recibe en casa.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -24,7 +25,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <AuthProvider>
-            <CartProvider>{children}</CartProvider>
+            <CartProvider>
+              <Toaster />
+              {children}
+            </CartProvider>
           </AuthProvider>
         </ThemeProvider>
       </body>

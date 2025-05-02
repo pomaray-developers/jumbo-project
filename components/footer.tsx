@@ -115,13 +115,9 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Contacto</h3>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-red-600 mr-2 mt-0.5" />
-                <span className="text-gray-600 dark:text-gray-400">Av. Principal 123, Ciudad</span>
-              </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-red-600 mr-2" />
-                <span className="text-gray-600 dark:text-gray-400">+1 234 567 890</span>
+                <span className="text-gray-600 dark:text-gray-400">+1 809 813 5032</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-red-600 mr-2" />

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { ShoppingCart, User, Search, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -14,10 +14,12 @@ import { JumboLogo } from "@/components/jumbo-logo"
 
 export function Navbar() {
   const pathname = usePathname()
-  const { user, isAuthenticated } = useAuth()
+  const router = useRouter()
+  const { isAuthenticated } = useAuth()
   const { items } = useCart()
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [_, setIsMobileMenuOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState("")
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +29,23 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (searchQuery.trim()) {
+      router.push(`/productos?q=${encodeURIComponent(searchQuery.trim())}`)
+    } else {
+      router.push("/productos")
+    }
+  }
+
+  const handleMobileSearch = () => {
+    if (searchQuery.trim()) {
+      router.push(`/productos?q=${encodeURIComponent(searchQuery.trim())}`)
+    } else {
+      router.push("/productos")
+    }
+  }
 
   return (
     <header
@@ -122,12 +141,27 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center relative w-1/3 max-w-md">
-            <Input type="search" placeholder="Buscar productos..." className="pr-10" />
-            <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <form onSubmit={handleSearch} className="w-full">
+              <Input
+                type="search"
+                placeholder="Buscar productos..."
+                className="pr-10"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <Button
+                type="submit"
+                variant="ghost"
+                size="icon"
+                className="absolute right-0 top-0 h-full"
+              >
+                <Search className="h-4 w-4 text-gray-400" />
+              </Button>
+            </form>
           </div>
 
           <div className="flex items-center space-x-4">
-            <Link href="/buscar" className="md:hidden">
+            <Link href="/buscar" className="md:hidden" onClick={handleMobileSearch}>
               <Button variant="ghost" size="icon">
                 <Search className="h-5 w-5" />
                 <span className="sr-only">Buscar</span>

@@ -166,7 +166,7 @@ export const allProducts: Product[] = [
       "Vino tinto reserva, añejado en barricas de roble, 750ml. Notas de frutos rojos y especias con un final elegante.",
     price: 15.99,
     image:
-      "https://images.unsplash.com/photo-1553361371-9b22f78a0b98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600&q=80",
+      "https://images.unsplash.com/photo-1714377676594-72f25dc96b2e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fFZpbm8lMjBib3R0ZWx8ZW58MHx8MHx8fDA%3D",
     category: "Bebidas",
     discount: 10,
     stock: 30,
@@ -235,7 +235,7 @@ export const allProducts: Product[] = [
       "Detergente ecológico concentrado para ropa, biodegradable, 1L. Limpieza eficaz respetando el medio ambiente.",
     price: 8.99,
     image:
-      "https://images.unsplash.com/photo-1583290005191-0a5f8201f3da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600&q=80",
+      "https://images.unsplash.com/photo-1647577746559-c9a28c0d0870?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RWNvbG9naWNhbCUyMERldGVyZ2VudHxlbnwwfHwwfHx8MA%3D%3D",
     category: "Limpieza",
     discount: 0,
     stock: 35,
@@ -331,7 +331,7 @@ export const allProducts: Product[] = [
       "Almendras tostadas sin sal, fuente de proteínas y grasas saludables, 250g. Snack nutritivo para cualquier momento.",
     price: 6.99,
     image:
-      "https://images.unsplash.com/photo-1574570093367-84b0d1b45d8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600&q=80",
+      "https://images.unsplash.com/photo-1663652851591-e3d9bfb6d8c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VG9hc3RlZCUyMEFsbW9uZCUyMENoaXBzfGVufDB8fDB8fHww",
     category: "Snacks",
     discount: 0,
     stock: 55,
@@ -345,7 +345,7 @@ export const allProducts: Product[] = [
       "Quinoa orgánica de grano entero, rica en proteínas y fibra, 500g. Superalimento versátil para ensaladas y guarniciones.",
     price: 7.49,
     image:
-      "https://images.unsplash.com/photo-1612708335403-7ddc0abca8cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600&q=80",
+      "https://images.unsplash.com/photo-1708949125682-c0cb09727101?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "Despensa",
     discount: 0,
     stock: 60,
@@ -455,7 +455,7 @@ export const allProducts: Product[] = [
       "Cereal integral con frutas deshidratadas, sin azúcares añadidos, 400g. Desayuno nutritivo y energético.",
     price: 5.49,
     image:
-      "https://images.unsplash.com/photo-1517747614396-d21a5925e785?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600&q=80",
+      "https://plus.unsplash.com/premium_photo-1674347952004-0174ea77b98c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fFdob2xlJTIwR3JhaW4lMjBDZXJlYWwlMjB3aXRoJTIwRnJ1aXR8ZW58MHx8MHx8fDA%3D",
     category: "Despensa",
     discount: 0,
     stock: 55,
@@ -468,7 +468,7 @@ export const allProducts: Product[] = [
     description: "Aceitunas verdes rellenas de pimiento, 350g. Aperitivo clásico con sabor mediterráneo.",
     price: 3.29,
     image:
-      "https://images.unsplash.com/photo-1632382394883-06c5a6b30a0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600&q=80",
+      "https://plus.unsplash.com/premium_photo-1691664005895-e095c0138509?q=80&w=1911&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "Despensa",
     discount: 0,
     stock: 60,

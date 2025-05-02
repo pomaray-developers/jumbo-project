@@ -25,16 +25,16 @@ export function Promotions() {
 
           <div className="relative rounded-xl overflow-hidden h-[200px]">
             <Image
-              src="https://images.unsplash.com/photo-1622434641406-a158123450f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400&q=80"
+              src="https://images.unsplash.com/photo-1506617420156-8e4536971650?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFjdGVvc3xlbnwwfHwwfHx8MA%3D%3D"
               alt="Promoción 2"
               fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex flex-col justify-center p-8">
-              <h3 className="text-2xl font-bold text-white mb-2">Descuentos en Electrodomésticos</h3>
-              <p className="text-white mb-4">Hasta 30% de descuento</p>
+              <h3 className="text-2xl font-bold text-white mb-2">Descuentos en Lácteos</h3>
+              <p className="text-white mb-4">Hasta 15% de descuento</p>
               <Button asChild className="w-fit bg-red-600 hover:bg-red-700">
-                <Link href="/electrodomesticos">Comprar ahora</Link>
+                <Link href="/productos/categoria/lacteos">Comprar ahora</Link>
               </Button>
             </div>
           </div>
