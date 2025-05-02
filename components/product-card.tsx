@@ -27,14 +27,6 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
           />
         </Link>
         {product.discount > 0 && <Badge className="absolute top-2 left-2 bg-red-600">-{product.discount}%</Badge>}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute top-2 right-2 bg-white/80 hover:bg-white rounded-full h-8 w-8"
-        >
-          <Heart className="h-4 w-4" />
-          <span className="sr-only">Añadir a favoritos</span>
-        </Button>
       </div>
       <CardContent className="p-4">
         <div className="mb-2">
@@ -49,7 +41,7 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
               {[...Array(5)].map((_, i) => (
                 <svg
                   key={i}
-                  className={`w-4 h-4 ${i < Math.floor(product.rating) ? "text-yellow-400 fill-yellow-400" : "text-gray-300 fill-gray-300"}`}
+                  className={`w-4 h-4 ${i < Math.floor(product.rating ?? 0) ? "text-yellow-400 fill-yellow-400" : "text-gray-300 fill-gray-300"}`}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >

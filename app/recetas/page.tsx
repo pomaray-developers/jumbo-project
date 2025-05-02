@@ -18,6 +18,27 @@ const recetas = [
     servings: 4,
     difficulty: "Fácil",
     category: "Plato Principal",
+    ingredients: [
+      "500g de pasta (espaguetis o tallarines)",
+      "6 tomates maduros",
+      "2 dientes de ajo",
+      "1 cebolla mediana",
+      "2 cucharadas de aceite de oliva",
+      "1 cucharadita de azúcar",
+      "Sal y pimienta al gusto",
+      "Albahaca fresca",
+      "Queso parmesano rallado"
+    ],
+    steps: [
+      "Poner una olla con agua a hervir. Añadir sal y cocinar la pasta según las instrucciones del paquete.",
+      "Mientras tanto, pelar y picar finamente el ajo y la cebolla.",
+      "Escaldar los tomates, pelarlos y cortarlos en cubos pequeños.",
+      "En una sartén grande, calentar el aceite de oliva y sofreír el ajo y la cebolla hasta que estén transparentes.",
+      "Añadir los tomates, el azúcar, sal y pimienta. Cocinar a fuego medio durante unos 15-20 minutos, removiendo ocasionalmente.",
+      "Escurrir la pasta y mezclarla con la salsa de tomate.",
+      "Servir con hojas de albahaca fresca y queso parmesano rallado por encima."
+    ],
+    relatedProducts: ["9", "10", "11"] // IDs de productos relacionados
   },
   {
     id: 2,
@@ -29,6 +50,29 @@ const recetas = [
     servings: 2,
     difficulty: "Fácil",
     category: "Ensalada",
+    ingredients: [
+      "200g de lechuga variada",
+      "1 pepino",
+      "2 tomates medianos",
+      "1 pimiento rojo",
+      "100g de queso feta",
+      "50g de aceitunas negras",
+      "1 cebolla roja pequeña",
+      "2 cucharadas de aceite de oliva",
+      "1 cucharada de vinagre balsámico",
+      "Orégano, sal y pimienta al gusto"
+    ],
+    steps: [
+      "Lavar y secar bien todas las verduras.",
+      "Cortar la lechuga en trozos pequeños y colocarla como base en un bowl grande.",
+      "Cortar el pepino, los tomates y el pimiento en cubos medianos.",
+      "Cortar la cebolla roja en rodajas finas.",
+      "Añadir todas las verduras cortadas sobre la lechuga.",
+      "Desmigar el queso feta por encima y añadir las aceitunas negras.",
+      "En un recipiente pequeño, mezclar el aceite de oliva, el vinagre balsámico, orégano, sal y pimienta.",
+      "Aliñar la ensalada con la mezcla justo antes de servir."
+    ],
+    relatedProducts: ["5", "21", "30"]
   },
   {
     id: 3,
@@ -40,6 +84,27 @@ const recetas = [
     servings: 4,
     difficulty: "Media",
     category: "Plato Principal",
+    ingredients: [
+      "4 muslos de pollo",
+      "3 zanahorias",
+      "2 patatas grandes",
+      "1 pimiento verde",
+      "1 pimiento rojo",
+      "1 cebolla grande",
+      "3 dientes de ajo",
+      "2 cucharadas de aceite de oliva",
+      "Sal, pimienta y romero al gusto"
+    ],
+    steps: [
+      "Precalentar el horno a 200°C.",
+      "Pelar y cortar las zanahorias y las patatas en trozos medianos.",
+      "Cortar los pimientos y la cebolla en tiras.",
+      "Pelar y picar los dientes de ajo.",
+      "En una bandeja para horno, colocar las verduras y los muslos de pollo.",
+      "Rociar con aceite de oliva, salpimentar y añadir romero al gusto.",
+      "Hornear durante 45-60 minutos, hasta que el pollo esté dorado y las verduras tiernas."
+    ],
+    relatedProducts: ["12", "15", "18"]
   },
   {
     id: 4,
@@ -51,6 +116,23 @@ const recetas = [
     servings: 2,
     difficulty: "Fácil",
     category: "Bebida",
+    ingredients: [
+      "1 plátano",
+      "1 taza de fresas",
+      "1 taza de arándanos",
+      "1 taza de espinacas",
+      "1 taza de leche de almendras",
+      "1 cucharada de miel"
+    ],
+    steps: [
+      "Lavar bien las frutas y las espinacas.",
+      "Pelar el plátano y cortarlo en trozos.",
+      "Colocar todas las frutas y las espinacas en una licuadora.",
+      "Añadir la leche de almendras y la miel.",
+      "Licuar hasta obtener una mezcla homogénea.",
+      "Servir inmediatamente."
+    ],
+    relatedProducts: ["3", "7", "14"]
   },
   {
     id: 5,
@@ -62,6 +144,30 @@ const recetas = [
     servings: 6,
     difficulty: "Media",
     category: "Plato Principal",
+    ingredients: [
+      "12 láminas de lasaña",
+      "2 calabacines",
+      "2 berenjenas",
+      "1 pimiento rojo",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "400g de tomate triturado",
+      "500ml de salsa bechamel",
+      "200g de queso mozzarella rallado",
+      "Aceite de oliva, sal y pimienta al gusto"
+    ],
+    steps: [
+      "Precalentar el horno a 180°C.",
+      "Lavar y cortar los calabacines, las berenjenas y el pimiento en rodajas finas.",
+      "Pelar y picar la cebolla y los dientes de ajo.",
+      "En una sartén grande, calentar un poco de aceite de oliva y sofreír la cebolla y el ajo hasta que estén transparentes.",
+      "Añadir el tomate triturado, salpimentar y cocinar a fuego medio durante 10-15 minutos.",
+      "En otra sartén, asar ligeramente las rodajas de calabacín, berenjena y pimiento.",
+      "En una fuente para horno, colocar una capa de láminas de lasaña, una capa de verduras asadas, una capa de salsa de tomate y una capa de salsa bechamel.",
+      "Repetir el proceso hasta terminar con una capa de salsa bechamel y espolvorear con queso mozzarella rallado.",
+      "Hornear durante 30-40 minutos, hasta que la lasaña esté dorada y burbujeante."
+    ],
+    relatedProducts: ["8", "16", "22"]
   },
   {
     id: 6,
@@ -73,6 +179,27 @@ const recetas = [
     servings: 24,
     difficulty: "Fácil",
     category: "Postre",
+    ingredients: [
+      "200g de avena",
+      "150g de harina",
+      "100g de azúcar moreno",
+      "100g de mantequilla",
+      "1 huevo",
+      "1 cucharadita de esencia de vainilla",
+      "1 cucharadita de polvo de hornear",
+      "100g de trozos de chocolate"
+    ],
+    steps: [
+      "Precalentar el horno a 180°C.",
+      "En un bowl grande, mezclar la mantequilla derretida con el azúcar moreno.",
+      "Añadir el huevo y la esencia de vainilla, y mezclar bien.",
+      "Incorporar la harina, la avena y el polvo de hornear, y mezclar hasta obtener una masa homogénea.",
+      "Añadir los trozos de chocolate y mezclar nuevamente.",
+      "Formar pequeñas bolitas con la masa y colocarlas en una bandeja para horno, aplastándolas ligeramente.",
+      "Hornear durante 12-15 minutos, hasta que las galletas estén doradas.",
+      "Dejar enfriar antes de servir."
+    ],
+    relatedProducts: ["4", "6", "13"]
   },
 ]
 
@@ -146,3 +273,5 @@ export default function RecetasPage() {
     </>
   )
 }
+
+export { recetas }

@@ -36,7 +36,7 @@ export default function OfertasPage() {
             <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm">
               <div className="relative h-[200px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1601599963565-b7f49beb6b8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400&q=80"
+                  src="https://plus.unsplash.com/premium_photo-1664305032567-2c460e29dec1?q=80&w=1968&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="2x1 en productos seleccionados"
                   fill
                   className="object-cover"
@@ -47,7 +47,7 @@ export default function OfertasPage() {
                   <p className="text-white/90 mb-4 max-w-md">
                     Lleva 2 y paga 1 en productos seleccionados de nuestra tienda
                   </p>
-                  <Button className="w-fit bg-red-600 hover:bg-red-700">Ver productos</Button>
+                  <Button className="w-fit bg-red-600 hover:bg-red-700 pointer-events-none">Próximamente</Button>
                 </div>
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function OfertasPage() {
                   <Badge className="w-fit mb-2 bg-red-600">Oferta Especial</Badge>
                   <h2 className="text-2xl font-bold text-white mb-2">30% en Frutas y Verduras</h2>
                   <p className="text-white/90 mb-4 max-w-md">Aprovecha nuestros descuentos en productos frescos</p>
-                  <Button className="w-fit bg-red-600 hover:bg-red-700">Ver productos</Button>
+                  <Button className="w-fit bg-red-600 hover:bg-red-700 pointer-events-none">Próximamente</Button>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function OfertasPage() {
                     <span className="text-sm text-gray-500 line-through">{formatCurrency(product.price)}</span>
                   </div>
                   <Button className="w-full mt-4 bg-red-600 hover:bg-red-700" asChild>
-                    <Link href={`/productos/${product.id}`}>Ver producto</Link>
+                    <Link href={`/productos/${product.id}`}>Próximamente</Link>
                   </Button>
                 </CardContent>
               </Card>

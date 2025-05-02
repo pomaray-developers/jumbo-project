@@ -6,44 +6,73 @@ import { Input } from "@/components/ui/input"
 import { MapPin, Phone, Clock, Search } from "lucide-react"
 import Image from "next/image"
 
-const tiendas = [
+const stores = [
   {
     id: 1,
-    name: "Jumbo Centro Comercial",
-    address: "Av. Principal 123, Centro Comercial Plaza, Ciudad",
-    phone: "+1 234 567 890",
-    hours: "Lun-Sáb: 8:00 - 22:00, Dom: 9:00 - 21:00",
-    image:
-      "https://images.unsplash.com/photo-1604719312566-8912e9c8a213?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400&q=80",
+    name: "Jumbo Carretera Mella",
+    address: "Carretera Mella casi esq. Charles de Gaulle, Santo Domingo Este, República Dominicana",
+    phone: "(809) 695-2268",
+    hours: "Lunes a Sábado: 7:00 AM - 10:00 PM; Domingo: 8:00 AM - 8:00 PM",
+    image: "/Jumbo-Carretera-Mella.jpg"
   },
   {
     id: 2,
-    name: "Jumbo Norte",
-    address: "Calle Norte 456, Zona Residencial, Ciudad",
-    phone: "+1 234 567 891",
-    hours: "Lun-Sáb: 8:00 - 22:00, Dom: 9:00 - 21:00",
-    image:
-      "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400&q=80",
+    name: "Jumbo Megacentro",
+    address: "Av. San Vicente de Paúl #321, Centro Comercial Megacentro (1er y 2do nivel), Santo Domingo Este, República Dominicana",
+    phone: "(809) 692-1000",
+    hours: "Lunes a Sábado: 8:00 AM - 10:00 PM; Domingo: 9:00 AM - 8:00 PM",
+    image: "/Jumbo-Megacentro.jpg"
   },
   {
     id: 3,
-    name: "Jumbo Sur",
-    address: "Av. Sur 789, Zona Comercial, Ciudad",
-    phone: "+1 234 567 892",
-    hours: "Lun-Sáb: 8:00 - 22:00, Dom: 9:00 - 21:00",
-    image:
-      "https://images.unsplash.com/photo-1578916171728-46686eac8d58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400&q=80",
+    name: "Jumbo San Isidro",
+    address: "Av. Rafael Tomás Fernández Domínguez esq. Juan Pablo Duarte, Urb. Los Ángeles, Santo Domingo Este, República Dominicana",
+    phone: "(809) 748-3012",
+    hours: "Lunes a Sábado: 7:00 AM - 10:00 PM; Domingo: 8:00 AM - 8:00 PM",
+    image: "/Jumbo-San-Isidro.jpg"
   },
   {
     id: 4,
-    name: "Jumbo Express",
-    address: "Calle Central 321, Zona Financiera, Ciudad",
-    phone: "+1 234 567 893",
-    hours: "Lun-Dom: 7:00 - 23:00",
-    image:
-      "https://images.unsplash.com/photo-1567958451986-2de427a4a0be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400&q=80",
+    name: "Jumbo Ágora Mall",
+    address: "Av. John F. Kennedy esq. Abraham Lincoln, Centro Comercial Ágora Mall, Santo Domingo, República Dominicana",
+    phone: "(809) 683-1008",
+    hours: "Lunes a Sábado: 7:00 AM - 10:00 PM; Domingo: 8:00 AM - 9:00 PM",
+    image: "/Jumbo-Agora-Mall.jpg"
   },
-]
+  {
+    id: 5,
+    name: "Jumbo Luperón",
+    address: "Av. Gregorio Luperón esq. Gustavo Mejía Ricart, Santo Domingo, República Dominicana",
+    phone: "(809) 562-6911",
+    hours: "Lunes a Sábado: 7:00 AM - 10:00 PM; Domingo: 8:00 AM - 8:00 PM",
+    image: "/Jumbo-Luperon.jpg"
+  },
+  {
+    id: 6,
+    name: "Jumbo La Vega",
+    address: "Av. Pedro A. Rivera esq. Mangio Bobadilla, La Vega, República Dominicana",
+    phone: "(809) 691-9141",
+    hours: "Lunes a Sábado: 7:00 AM - 10:00 PM; Domingo: 8:00 AM - 8:00 PM",
+    image: "/Jumbo-La-Vega.jpg"
+  },
+  {
+    id: 7,
+    name: "Jumbo San Pedro",
+    address: "Av. Luis Amiama Tío esq. Calle José Hazim Azar #104, San Pedro de Macorís, República Dominicana",
+    phone: "(809) 529-5851",
+    hours: "Lunes a Sábado: 7:00 AM - 10:00 PM; Domingo: 8:00 AM - 8:00 PM",
+    image: "/Jumbo San Pedro.webp"
+  },
+  {
+    id: 8,
+    name: "Jumbo La Romana",
+    address: "Av. Libertad esq. Dr. Gonzalvo, La Romana, República Dominicana",
+    phone: "(809) 813-5032",
+    hours: "Lunes a Sábado: 7:00 AM - 10:00 PM; Domingo: 8:00 AM - 9:00 PM",
+    image: "/Jumbo-La-Romana.jpg"
+  }
+];
+
 
 export default function TiendasPage() {
   return (
@@ -52,7 +81,7 @@ export default function TiendasPage() {
       <main className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-12">
         <div className="relative h-[300px] overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1601599963565-b7f49beb6b8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&h=600&q=80"
+            src="/Banner-Tiendas.jpg"
             alt="Nuestras Tiendas"
             fill
             className="object-cover"
@@ -78,28 +107,28 @@ export default function TiendasPage() {
           <h2 className="text-3xl font-bold mb-8">Tiendas Jumbo</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tiendas.map((tienda) => (
-              <Card key={tienda.id} className="overflow-hidden">
+            {stores.map((store) => (
+              <Card key={store.id} className="overflow-hidden">
                 <div className="relative h-[200px]">
-                  <Image src={tienda.image || "/placeholder.svg"} alt={tienda.name} fill className="object-cover" />
+                  <Image src={store.image || "/placeholder.svg"} alt={store.name} fill className="object-cover" />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">{tienda.name}</h3>
+                  <h3 className="text-xl font-bold mb-4">{store.name}</h3>
 
                   <div className="space-y-3">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-red-600 mr-2 mt-0.5" />
-                      <span>{tienda.address}</span>
+                      <span>{store.address}</span>
                     </div>
 
                     <div className="flex items-start">
                       <Phone className="h-5 w-5 text-red-600 mr-2 mt-0.5" />
-                      <span>{tienda.phone}</span>
+                      <span>{store.phone}</span>
                     </div>
 
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-red-600 mr-2 mt-0.5" />
-                      <span>{tienda.hours}</span>
+                      <span>{store.hours}</span>
                     </div>
                   </div>
 
